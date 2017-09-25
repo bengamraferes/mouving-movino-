@@ -1,0 +1,72 @@
+var gZ = values[5];
+gZ = gZ*100 ;
+//console.log(values);
+//console.log(gZ);
+
+
+  var up = new Boolean(false);
+  var down = new Boolean(false);
+  var aZ = values[2];
+  aZ = aZ ;
+var upAmax = '';
+var upGmin = '';
+var downAmin= '';
+var downGmax = '';
+  //console.log(aZ);
+    var intialaZ = -0.45;
+    if  ((aZ >intialaZ)&&( gZ < 2))   {
+      up = true ;
+      console.log('je monte');
+      var tAz =[aZ,aZ];
+      var tGz = [gZ,gZ];
+      function diffdate(d1,d2){
+  //var WNbJours = d2.getTime() - d1.getTime();
+  //return Math.ceil(WNbJours/(1000*60*60*24));
+  }
+    /*  setInterval(function(){
+ tAz.sort(function(a, b){return b-a});
+  upAmax = tAz[0];
+  upGmin = tGz[0];
+
+ tGz.sort(function(a, b){return a-b});
+
+}, 2000);*/
+
+//console.log(t);
+  setInterval(function(){  Array.maxA  = Math.max.apply( Math, tAz );
+//console.log(upAmax);
+//  var upAmax = Array.max ;
+   }, 1000);
+ setInterval(function(){ Array.minG = Math.min.apply( Math, tGz );
+ //var upGmin =  Array.min
+   ;}, 1000);
+  // console.log(Array.maxA);
+   upAmax = Array.maxA ;
+    //console.log(upAmax);
+    upGmin = Array.minG ;
+intialaZ = upAmax ;
+
+//console.log(t1);
+if ((aZ -0.5 <  upAmax) && ( upGmin <gZ ) && (up = true) ){
+  ;
+          up = false ;
+          down = true ;
+            console.log('je suis entrain de desendre ' );
+        setInterval(function(){
+          Array.minA = Math.min.apply( Math, tAz );
+        }, 1000);
+        setInterval(function(){ Array.maxG= Math.max.apply( Math, tGz );
+        }, 1000);
+        downAmin = Array.minA ;
+        downGmax =  Array.maxG ;
+        if ((aZ >  downAmin) && ( downGmax > gZ ) )
+        {
+          up = true ;
+          down = false;
+          console.log('je remante ');
+        }
+
+       }
+
+}
+
